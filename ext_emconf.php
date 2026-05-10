@@ -1,7 +1,8 @@
 <?php
+
 $EM_CONF[$_EXTKEY] = [
     'title' => 'Mai Team',
-    'description' => 'Team member records with name, role, bio, image, and contact links. Categories use TYPO3 sys_category.',
+    'description' => 'Team member management extension for displaying and managing team profiles with roles, bios, and contact information.',
     'category' => 'module',
     'author' => 'Maispace',
     'author_email' => '',

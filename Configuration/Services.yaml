@@ -7,3 +7,9 @@ services:
   Maispace\MaiTeam\:
     resource: '../Classes/*'
     exclude: '../Classes/Domain/Model/*'
+
+  Maispace\MaiTeam\Controller\TeamMemberController:
+    public: true
+
+  Maispace\MaiTeam\Controller\Backend\TeamMemberBackendController:
+    public: true

@@ -1,0 +1,4 @@
+name: maispace/mai-team
+label: 'MaiSpace Team'
+dependencies:
+  - maispace/mai-base

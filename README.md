@@ -1,11 +1,11 @@
 # maispace/mai-team — TYPO3 Extension
-[![PHP](https://img.shields.io/badge/PHP-8.5%2B-blue)](https://www.php.net/)
-[![TYPO3](https://img.shields.io/badge/TYPO3-14.1-orange)](https://typo3.org/)
+[![PHP](https://img.shields.io/badge/PHP-8.2%2B-blue)](https://www.php.net/)
+[![TYPO3](https://img.shields.io/badge/TYPO3-13.4%20LTS-orange)](https://typo3.org/)
 [![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
 
-Team member records with name, role, bio, image, and contact links. Categories use TYPO3 sys_category.
+Team member management extension for displaying organisation staff with profiles, categories, and a backend export.
 
-**Requires:** TYPO3 14.1 · PHP 8.5+
+**Requires:** TYPO3 13.4 LTS / 14.1 · PHP 8.2+
 
 ---
 

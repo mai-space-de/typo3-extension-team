@@ -1,0 +1,52 @@
+<html
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    data-namespace-typo3-fluid="true"
+>
+<f:if condition="{teamMember}">
+    <f:then>
+        <div class="mai-team-detail">
+            <f:if condition="{teamMember.image}">
+                <div class="mai-team-detail__image">
+                    <f:image image="{teamMember.image}" alt="{teamMember.fullName}" width="400" height="400" />
+                </div>
+            </f:if>
+            <div class="mai-team-detail__content">
+                <h1 class="mai-team-detail__name">{teamMember.fullName}</h1>
+                <f:if condition="{teamMember.role}">
+                    <p class="mai-team-detail__role">{teamMember.role}</p>
+                </f:if>
+                <f:if condition="{teamMember.bio}">
+                    <div class="mai-team-detail__bio">
+                        <f:format.html>{teamMember.bio}</f:format.html>
+                    </div>
+                </f:if>
+                <div class="mai-team-detail__contact">
+                    <f:if condition="{teamMember.email}">
+                        <p class="mai-team-detail__email">
+                            <a href="mailto:{teamMember.email}">{teamMember.email}</a>
+                        </p>
+                    </f:if>
+                    <f:if condition="{teamMember.phone}">
+                        <p class="mai-team-detail__phone">
+                            <a href="tel:{teamMember.phone}">{teamMember.phone}</a>
+                        </p>
+                    </f:if>
+                    <f:if condition="{teamMember.linkedin}">
+                        <p class="mai-team-detail__linkedin">
+                            <a href="{teamMember.linkedin}" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                        </p>
+                    </f:if>
+                </div>
+            </div>
+        </div>
+        <f:link.action action="list" class="mai-team-detail__back">
+            <f:translate key="teamMember.detail.back" extensionName="mai_team">Back to team</f:translate>
+        </f:link.action>
+    </f:then>
+    <f:else>
+        <f:link.action action="list">
+            <f:translate key="teamMember.detail.notFound" extensionName="mai_team">Team member not found.</f:translate>
+        </f:link.action>
+    </f:else>
+</f:if>
+</html>

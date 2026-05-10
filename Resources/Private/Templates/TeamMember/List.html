@@ -1,0 +1,44 @@
+<html
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    data-namespace-typo3-fluid="true"
+>
+<f:if condition="{teamMembers}">
+    <f:then>
+        <div class="mai-team-list">
+            <f:for each="{teamMembers}" as="teamMember">
+                <div class="mai-team-list__item">
+                    <f:if condition="{teamMember.image}">
+                        <div class="mai-team-list__image">
+                            <f:image image="{teamMember.image}" alt="{teamMember.fullName}" width="200" height="200" />
+                        </div>
+                    </f:if>
+                    <div class="mai-team-list__content">
+                        <h3 class="mai-team-list__name">
+                            <f:link.action action="detail" arguments="{teamMember: teamMember}">{teamMember.fullName}</f:link.action>
+                        </h3>
+                        <f:if condition="{teamMember.role}">
+                            <p class="mai-team-list__role">{teamMember.role}</p>
+                        </f:if>
+                        <f:if condition="{teamMember.email}">
+                            <p class="mai-team-list__email">
+                                <a href="mailto:{teamMember.email}">{teamMember.email}</a>
+                            </p>
+                        </f:if>
+                    </div>
+                </div>
+            </f:for>
+        </div>
+
+        <f:if condition="{pagination}">
+            <nav class="mai-team-list__pagination">
+                <f:render partial="Pagination" arguments="{pagination: pagination}" />
+            </nav>
+        </f:if>
+    </f:then>
+    <f:else>
+        <p class="mai-team-list__empty">
+            <f:translate key="teamMember.list.empty" extensionName="mai_team">No team members found.</f:translate>
+        </p>
+    </f:else>
+</f:if>
+</html>

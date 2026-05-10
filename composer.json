@@ -1,6 +1,6 @@
 {
     "name": "maispace/mai-team",
-    "description": "Team member records with name, role, bio, image, and contact links. Categories use TYPO3 sys_category.",
+    "description": "Team member management extension for displaying and managing team profiles with roles, bios, and contact information.",
     "type": "typo3-cms-extension",
     "license": "GPL-2.0-or-later",
     "authors": [
@@ -9,6 +9,9 @@
             "role": "Developer"
         }
     ],
+    "require": {
+        "maispace/mai-base": "@dev"
+    },
     "autoload": {
         "psr-4": {
             "Maispace\\MaiTeam\\": "Classes"

@@ -7,4 +7,8 @@ return [
         'provider' => \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
         'source' => 'EXT:mai_team/Resources/Public/Icons/Extension.svg',
     ],
+    'tx-maiteam-teammember' => [
+        'provider' => \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+        'source' => 'EXT:mai_team/Resources/Public/Icons/tx_maiteam_team_member.svg',
+    ],
 ];
