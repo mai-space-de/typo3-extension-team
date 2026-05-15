@@ -8,7 +8,7 @@ defined('TYPO3') or die();
     [
         'label' => 'LLL:EXT:mai_team/Resources/Private/Language/locallang_db.xlf:tt_content.CType.mai_team_view',
         'value' => 'mai_team_view',
-        'icon' => 'EXT:mai_team/Resources/Public/Icons/ContentElement/TeamView.svg',
+        'icon' => 'EXT:mai_base/Resources/Public/Icons/generic_content.svg',
         'group' => 'default',
     ],
     'CType',
