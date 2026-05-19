@@ -1,5 +1,1 @@
-plugin.tx_maiteam {
-    settings {
-        listLimit = 12
-    }
-}
+@import 'EXT:mai_team/Configuration/TypoScript/constants.typoscript'

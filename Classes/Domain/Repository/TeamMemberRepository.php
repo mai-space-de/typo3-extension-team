@@ -15,7 +15,7 @@ use TYPO3\CMS\Extbase\Persistence\Repository;
 class TeamMemberRepository extends Repository
 {
     /**
-     * @var array<string, string>
+     * @var array<non-empty-string, 'ASC'|'DESC'>
      */
     protected $defaultOrderings = [
         'sorting' => QueryInterface::ORDER_ASCENDING,

@@ -21,14 +21,14 @@ class TeamMemberController extends AbstractActionController
     public function listAction(): ResponseInterface
     {
         $settings = $this->getSettings();
-        $limit = (int)($settings['listLimit'] ?? 12);
+        $limit = (int) ($settings['listLimit'] ?? 12);
 
         $teamMembers = $this->teamMemberRepository->findAll();
-        $pagination = $this->paginateQueryResult($teamMembers, $this->request, $limit);
+        $paginationData = $this->paginateQueryResult($teamMembers, $limit);
 
         $this->view->assignMultiple([
-            'teamMembers' => $pagination['paginatedItems'],
-            'pagination' => $pagination['pagination'],
+            'teamMembers' => $paginationData['paginator'],
+            'pagination' => $paginationData['pagination'],
         ]);
 
         return $this->htmlResponse();

@@ -28,7 +28,6 @@ class TeamMemberBackendController extends AbstractBackendController
     public function indexAction(): ResponseInterface
     {
         $moduleTemplate = $this->createModuleTemplate();
-        $this->addShortcutButton($moduleTemplate);
 
         $this->assignMultiple($moduleTemplate, [
             'teamMembers' => $this->teamMemberRepository->findAll(),
