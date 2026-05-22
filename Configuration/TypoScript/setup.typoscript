@@ -1,37 +1,16 @@
-plugin.tx_maiteam {
+plugin.tx_maiteam_view {
     view {
         templateRootPaths {
-            0 = {$plugin.tx_maiteam.view.templateRootPaths.0}
+            0 = {$plugin.tx_maiteam_view.view.templateRootPaths.0}
         }
         partialRootPaths {
-            0 = {$plugin.tx_maiteam.view.partialRootPaths.0}
+            0 = {$plugin.tx_maiteam_view.view.partialRootPaths.0}
         }
         layoutRootPaths {
-            0 = {$plugin.tx_maiteam.view.layoutRootPaths.0}
+            0 = {$plugin.tx_maiteam_view.view.layoutRootPaths.0}
         }
     }
     settings {
-        listLimit = {$plugin.tx_maiteam.settings.listLimit}
-    }
-}
-
-tt_content.mai_team_view = FLUIDTEMPLATE
-tt_content.mai_team_view {
-    templateName = TeamMember/List
-    templateRootPaths {
-        0 = {$plugin.tx_maiteam.view.templateRootPaths.0}
-    }
-    partialRootPaths {
-        0 = {$plugin.tx_maiteam.view.partialRootPaths.0}
-    }
-    layoutRootPaths {
-        0 = {$plugin.tx_maiteam.view.layoutRootPaths.0}
-    }
-    dataProcessing {
-        10 = TYPO3\CMS\Frontend\DataProcessing\FlexFormProcessor
-        10 {
-            fieldName = pi_flexform
-            targetVariable = flexform
-        }
+        listLimit = {$plugin.tx_maiteam_view.settings.listLimit}
     }
 }

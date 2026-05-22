@@ -1,4 +1,4 @@
-plugin.tx_maiteam {
+plugin.tx_maiteam_view {
     view {
         templateRootPaths.0 = EXT:mai_team/Resources/Private/Templates/
         partialRootPaths.0 = EXT:mai_team/Resources/Private/Partials/
