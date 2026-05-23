@@ -39,7 +39,7 @@ return (new Table($lang('table.tx_maiteam_team_member')))
     ->addColumn(
         'bio',
         $lang('tx_maiteam_team_member.bio'),
-        (new TextConfig())->setCols(40)->setRows(6)->setEval('trim')
+        (new TextConfig())->setCols(40)->setRows(6)->setEval('trim')->enableRte()->setRichtextConfiguration('default')
     )
     ->addColumn(
         'email',
