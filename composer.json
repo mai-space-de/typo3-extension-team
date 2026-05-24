@@ -12,6 +12,7 @@
     "require": {
         "php": "^8.2",
         "maispace/mai-base": "^14.0",
+        "maispace/mai-search": "^14.0@dev",
         "typo3/cms-core": "^14.1",
         "typo3/cms-extbase": "^14.1",
         "typo3/cms-fluid": "^14.1"
@@ -67,6 +68,16 @@
         "test": "phpunit --configuration phpunit.xml.dist",
         "test:unit": "phpunit --configuration phpunit.xml.dist --testsuite Unit"
     },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../typo3-extension-base"
+        },
+        {
+            "type": "path",
+            "url": "../typo3-extension-search"
+        }
+    ],
     "config": {
         "allow-plugins": {
             "typo3/cms-composer-installers": true,
