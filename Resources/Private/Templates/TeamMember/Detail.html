@@ -1,9 +1,11 @@
 <html
     xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:seo="http://typo3.org/ns/Maispace/MaiSeo/ViewHelpers"
     data-namespace-typo3-fluid="true"
 >
 <f:if condition="{teamMember}">
     <f:then>
+        <seo:structuredData />
         <div class="mai-team-detail">
             <f:if condition="{teamMember.image}">
                 <div class="mai-team-detail__image">
