@@ -2,10 +2,10 @@
     xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
     data-namespace-typo3-fluid="true"
 >
-<f:if condition="{teamMembers}">
+<f:if condition="{teamMembers.paginatedItems}">
     <f:then>
         <div class="mai-team-list">
-            <f:for each="{teamMembers}" as="teamMember">
+            <f:for each="{teamMembers.paginatedItems}" as="teamMember">
                 <div class="mai-team-list__item">
                     <f:if condition="{teamMember.image}">
                         <div class="mai-team-list__image">
