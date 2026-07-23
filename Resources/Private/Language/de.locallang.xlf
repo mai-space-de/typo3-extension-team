@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="de" datatype="plaintext" original="messages" product-name="mai_team">
+        <body>
+            <trans-unit id="teamMember.list.title">
+                <source>Team</source>
+                <target>Team</target>
+            </trans-unit>
+            <trans-unit id="teamMember.list.empty">
+                <source>No team members found.</source>
+                <target>Keine Teammitglieder gefunden.</target>
+            </trans-unit>
+            <trans-unit id="teamMember.detail.title">
+                <source>Team Member</source>
+                <target>Teammitglied</target>
+            </trans-unit>
+            <trans-unit id="teamMember.detail.back">
+                <source>Back to team</source>
+                <target>Zurück zum Team</target>
+            </trans-unit>
+            <trans-unit id="teamMember.detail.notFound">
+                <source>Team member not found.</source>
+                <target>Teammitglied nicht gefunden.</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
