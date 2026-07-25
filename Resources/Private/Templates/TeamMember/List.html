@@ -9,7 +9,7 @@
                 <div class="mai-team-list__item">
                     <f:if condition="{teamMember.image}">
                         <div class="mai-team-list__image">
-                            <f:image image="{teamMember.image}" alt="{teamMember.fullName}" width="200" height="200" />
+                            <f:image image="{teamMember.image}" alt="{teamMember.fullName}" width="800" height="800c" />
                         </div>
                     </f:if>
                     <div class="mai-team-list__content">
@@ -22,6 +22,11 @@
                         <f:if condition="{teamMember.email}">
                             <p class="mai-team-list__email">
                                 <a href="mailto:{teamMember.email}">{teamMember.email}</a>
+                            </p>
+                        </f:if>
+                        <f:if condition="{teamMember.phone}">
+                            <p class="mai-team-list__phone">
+                                <a href="tel:{teamMember.phone}">{teamMember.phone}</a>
                             </p>
                         </f:if>
                     </div>
