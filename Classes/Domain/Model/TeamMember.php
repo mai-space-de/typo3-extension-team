@@ -7,6 +7,7 @@ namespace Maispace\MaiTeam\Domain\Model;
 use TYPO3\CMS\Extbase\Annotation\ORM\Lazy;
 use TYPO3\CMS\Extbase\Domain\Model\FileReference;
 use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
+use TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy;
 use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 
 class TeamMember extends AbstractEntity
@@ -21,7 +22,7 @@ class TeamMember extends AbstractEntity
     protected int $sorting = 0;
 
     #[Lazy]
-    protected ?FileReference $image = null;
+    protected FileReference|LazyLoadingProxy|null $image = null;
 
     /**
      * @var ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\Category>
@@ -121,7 +122,11 @@ class TeamMember extends AbstractEntity
 
     public function getImage(): ?FileReference
     {
-        return $this->image;
+        if ($this->image instanceof LazyLoadingProxy) {
+            $this->image->_loadRealInstance();
+        }
+
+        return $this->image instanceof FileReference ? $this->image : null;
     }
 
     public function setImage(?FileReference $image): void
