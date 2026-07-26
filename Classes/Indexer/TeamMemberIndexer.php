@@ -62,8 +62,8 @@ class TeamMemberIndexer extends AbstractIndexer implements SearchResultFormatter
         }
 
         $connection = $this->connectionFactory->getConnection();
-        $connection->getWriteService()->deleteByQuery('id:' . $this->getType() . '-' . $uid);
-        $connection->getWriteService()->commit(false, false);
+        $connection->deleteByQuery('id:' . $this->getType() . '-' . $uid);
+        $connection->commit(false, false);
     }
 
     protected function buildContent(object $record): string
