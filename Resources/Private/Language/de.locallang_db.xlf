@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="de" datatype="plaintext" original="messages"
+          date="2025-01-01T00:00:00Z" product-name="mai_team">
+        <header/>
+        <body>
+            <trans-unit id="tt_content.CType.mai_team_view">
+                <source>Team View</source>
+                <target>Team-Ansicht</target>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.mai_team_view">
+                <source>Team Settings</source>
+                <target>Team-Einstellungen</target>
+            </trans-unit>
+
+            <trans-unit id="flexform.sheet.general">
+                <source>General</source>
+                <target>Allgemein</target>
+            </trans-unit>
+            <trans-unit id="flexform.settings.listLimit">
+                <source>List Limit</source>
+                <target>Listenlimit</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
