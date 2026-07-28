@@ -11,7 +11,7 @@ ExtensionUtility::registerPlugin(
     'View',
     'LLL:EXT:mai_team/Resources/Private/Language/locallang_db.xlf:tt_content.CType.mai_team_view',
     'mai-content',
-    'default',
+    'maispace_plugins_lists',
     '',
     'FILE:EXT:mai_team/Configuration/FlexForms/TeamPlugin.xml',
 );
