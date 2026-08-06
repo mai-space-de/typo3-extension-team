@@ -19,7 +19,7 @@
                 </f:if>
                 <f:if condition="{teamMember.bio}">
                     <div class="mai-team-detail__bio">
-                        <f:format.html>{teamMember.bio}</f:format.html>
+                        <f:render.text record="{teamMember}" field="bio" />
                     </div>
                 </f:if>
                 <div class="mai-team-detail__contact">
