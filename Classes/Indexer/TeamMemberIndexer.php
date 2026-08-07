@@ -23,6 +23,11 @@ class TeamMemberIndexer extends AbstractIndexer implements SearchResultFormatter
         return 'team';
     }
 
+    public function getTableName(): string
+    {
+        return self::TABLE_NAME;
+    }
+
     public function supports(string $table): bool
     {
         return $table === self::TABLE_NAME;
