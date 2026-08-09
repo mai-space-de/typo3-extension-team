@@ -95,7 +95,10 @@ class TeamMemberIndexer extends AbstractIndexer implements SearchResultFormatter
 
         try {
             $site = GeneralUtility::makeInstance(SiteFinder::class)->getSiteByPageId((int) $record->getPid());
-            $uri = $site->getRouter()->generateUri((int) $record->getPid());
+            $uri = $site->getRouter()->generateUri(
+                (int) $record->getPid(),
+                ['uid' => $record->getUid()],
+            );
 
             return (string) $uri;
         } catch (\Exception) {
