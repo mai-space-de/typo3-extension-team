@@ -13,3 +13,21 @@ services:
 
   Maispace\MaiTeam\Controller\Backend\TeamMemberBackendController:
     public: true
+
+  dashboard.widget.maiTeamManual:
+    class: 'ProudNerds\PnBackendManual\Widgets\ManualWidget'
+    arguments:
+      $options:
+        file: 'EXT:mai_team/Resources/Private/Manual/Manual.md'
+        numbered: true
+        contentsDepth: 2
+        printButton: true
+    tags:
+      - name: dashboard.widget
+        identifier: 'maiTeamManual'
+        groupNames: 'documentation'
+        title: 'Handbuch: Team'
+        description: 'Kurze Anleitung für Team-Profile.'
+        iconIdentifier: 'content-book'
+        height: 'medium'
+        width: 'medium'
